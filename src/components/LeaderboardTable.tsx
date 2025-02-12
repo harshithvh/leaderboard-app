@@ -1,8 +1,10 @@
+import { UserResponse } from '@/types';
+
 export default function LeaderboardTable({ 
     data, 
     loading 
   }: { 
-    data: any[]; 
+    data: UserResponse[]; 
     loading: boolean 
   }) {
     if (loading) {

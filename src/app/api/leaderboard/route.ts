@@ -1,11 +1,6 @@
 import { NextResponse } from 'next/server';
 import { supabase } from '@/lib/supabase';
-
-type User = {
-  id: string;
-  name: string;
-  email: string;
-}
+import { User } from '@/types';
 
 type LeaderboardEntry = User & {
   attempts: number;

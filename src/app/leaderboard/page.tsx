@@ -4,12 +4,13 @@ import { useState, useEffect } from 'react';
 import SearchBar from '@/components/SearchBar';
 import FilterControls from '@/components/FilterControls';
 import LeaderboardTable from '@/components/LeaderboardTable';
+import { UserResponse } from '@/types';
 
 export default function LeaderboardPage() {
   const [search, setSearch] = useState('');
   const [minAttempts, setMinAttempts] = useState(1);
   const [maxAttempts, setMaxAttempts] = useState(100);
-  const [data, setData] = useState<any[]>([]);
+  const [data, setData] = useState<UserResponse[]>([]);
   const [loading, setLoading] = useState(false);
 
   const fetchData = async () => {
